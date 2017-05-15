@@ -20,5 +20,17 @@
         <members>*</members>
         <name>AuraDefinitionBundle</name>
     </types>
-    <version>36.0</version>
+	<types>
+        <members>Item__c</members>
+        <name>CustomObject</name>
+    </types>
+	<types>
+        <members>Item__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Item__c-Item Layout</members>
+        <name>Layout</name>
+    </types>
+    <version>39.0</version>
 </Package>

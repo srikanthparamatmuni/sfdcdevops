@@ -1,0 +1,27 @@
+<apex:page sidebar="true" controller="ImportItems" showHeader="true" tabStyle="Item__c">
+   <apex:form >
+      <apex:sectionHeader title="Upload Patient Data"/>
+      <apex:pagemessages />
+      <apex:pageBlock >
+             <!--  Component to allow user to upload file from local machine -->
+             <center>
+              <apex:inputFile value="{!contentFile}" filename="{!nameFile}" /> <apex:commandButton action="{!ReadFile}" value="Upload File" id="theButton" style="width:70px;"/>
+             </center>  
+      
+      <!-- After the user clicks the 'Upload File' button, this section displays the inserted data -->
+      
+      <apex:pageblocktable value="{!uploadedItems}" var="acc" rendered="{!NOT(ISNULL(uploadedItems))}">
+          <apex:column headerValue="Item Name">
+              <apex:outputField value="{!acc.Name}"/>
+          </apex:column>
+          <apex:column headerValue="Active">
+              <apex:outputField value="{!acc.Active__c}"/>
+          </apex:column>
+          <apex:column headerValue="Location">
+              <apex:outputField value="{!acc.Location__c}"/>
+          </apex:column>
+      </apex:pageblocktable> 
+      
+      </apex:pageBlock>       
+   </apex:form>   
+</apex:page>
