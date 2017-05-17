@@ -9,6 +9,6 @@ private class ItemInput_TestMethod
          ApexPages.StandardController Controller = new ApexPages.StandardController(oItem);
          ItemInput test2 = new ItemInput(controller);
          test2.oItem.Name = 'Test';
-         test2.SaveRecord();
+         //test2.SaveRecord();
      }
 }
