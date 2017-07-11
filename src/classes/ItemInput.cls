@@ -5,8 +5,13 @@ Public with Sharing Class ItemInput{
     }
     
     Public PageReference SaveRecord(){
+		Try{
+		}
+		Catch(Exception e){
+		}
         Insert oItem;
         PageReference Master = new PageReference('/' + oItem.Id);
         return Master;
     }
+	
 }
