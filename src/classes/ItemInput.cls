@@ -9,14 +9,6 @@ Public with Sharing Class ItemInput{
 		}
 		Catch(Exception e){
 		}
-		If(true){
-			If(true){
-			If(true){
-			}
-			If(true){
-			}
-			}
-		}
         Insert oItem;
         PageReference Master = new PageReference('/' + oItem.Id);
         return Master;
