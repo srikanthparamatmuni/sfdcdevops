@@ -79,6 +79,12 @@ public with sharing class ImportItems
             ApexPages.Message errormsg = new ApexPages.Message(ApexPages.severity.ERROR,'An error has occured inserting the records'+e.getMessage());
             ApexPages.addMessage(errormsg);
         }    
+		try{
+        	//
+        }
+        catch(exception e){
+			//
+        }
         return null;
     }
    
